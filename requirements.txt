@@ -1,0 +1,25 @@
+# Core notebooks
+jupyterlab
+numpy
+matplotlib
+pillow
+imageio
+
+# Optional math and visualization
+# scipy
+# sympy
+# plotly
+
+# Optional teaching and data notebooks
+# pandas
+# openpyxl
+# scikit-learn
+
+# Optional audio notebooks
+# praat-parselmouth
+# pydub
+# gTTS
+
+# Optional ManimGL work
+# Install ManimGL separately if needed; it is not forced for this curation repo.
+# manimgl
