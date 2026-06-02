@@ -38,6 +38,10 @@ tmp/
 scratch/
 *.tmp
 *.log
+*.png
+*.gif
+*.mp4
+*.zip
 
 # Build artifacts
 build/
