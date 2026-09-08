@@ -1,0 +1,205 @@
+# Fuente: notebooks/math/yuri_karlovich_experiments.ipynb; celda 22 (conteo desde 1)
+
+# anima_star_like_bola_variable.py
+# Requisitos: numpy, matplotlib, Pillow (para GIF). Opcional: ffmpeg para MP4.
+# Ejecuta: python anima_star_like_bola_variable.py
+
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation, PillowWriter
+
+try:
+    from matplotlib.animation import FFMpegWriter
+    HAVE_FFMPEG = True
+except Exception:
+    HAVE_FFMPEG = False
+
+# ==================== Parámetros ====================
+# Geometría de la curva estrella
+c_list    = [-1.2, -1.0, -0.6, 0.5, 0.9]     # c_k ≠ 0  (arcos)
+beta_list = [2.0, 2.1, 2.7, 3.0, 3.5, 4.0]   # π/2 < β < 3π/2  (rayos)
+
+n_arc   = 1500        # muestras por arco
+n_ray   = 250         # muestras por rayo
+x_min   = 1e-3
+x_max   = 1e3
+r_len   = None        # si None, se calcula como 1.2 * max(1/|c_k|)
+
+# Velocidad / suavidad
+fps         = 24      # cuadros por segundo
+dur_seconds = 20      # duración total (sube para ir más lento)
+trail_len   = 0.06    # 0..1 proporción de estela (0 sin estela)
+
+# Radio variable: eps(t) = eps_base * (1 + eps_amp * sin(2π*freq*t_norm))
+eps_base = 0.25
+eps_amp  = 0.6
+eps_freq = 1.0
+# ====================================================
+
+def star_like_samples(c_list, beta_list,
+                      n_arc=1500, n_ray=250,
+                      x_min=1e-3, x_max=1e3, r_len=None):
+    """Devuelve listas de arrays complejos 'arcs' y 'rays' con las muestras."""
+    x = np.logspace(np.log10(x_min), np.log10(x_max), n_arc)
+    arcs = [1.0 / (x - 1j*ck) for ck in c_list]
+
+    if r_len is None:
+        r_len = 1.2 * (max([1/abs(c) for c in c_list], default=1.0))
+    r = np.linspace(0.0, r_len, n_ray)
+    rays = [np.exp(1j*beta) * r for beta in beta_list]
+    return arcs, rays
+
+def concat_with_separators(segments):
+    """Concatena segmentos complejos y coloca NaN entre ellos para cortar líneas."""
+    if not segments:
+        return np.array([np.nan + 1j*np.nan])
+    parts = []
+    for i, seg in enumerate(segments):
+        parts.append(seg.astype(complex))
+        if i != len(segments) - 1:
+            parts.append(np.array([np.nan + 1j*np.nan]))
+    return np.concatenate(parts)
+
+def make_highlight_with_mask(segments, mask_per_point):
+    """
+    Crea un array con NaN entre segmentos y NaN donde mask=False.
+    'mask_per_point' corresponde a la concatenación simple de puntos (sin separadores).
+    """
+    out = []
+    cursor = 0
+    for i, seg in enumerate(segments):
+        m = mask_per_point[cursor:cursor + len(seg)]
+        z_seg = seg.copy()
+        z_seg[~m] = np.nan + 1j*np.nan
+        out.append(z_seg)
+        cursor += len(seg)
+        if i != len(segments) - 1:
+            out.append(np.array([np.nan + 1j*np.nan]))
+    return np.concatenate(out) if out else np.array([np.nan + 1j*np.nan])
+
+def build_point_array(segments):
+    """Concatena todos los puntos (sin separadores) y devuelve índices de corte por segmento."""
+    if not segments:
+        return np.zeros(0, dtype=complex), []
+    lens = [len(s) for s in segments]
+    z_pts = np.concatenate(segments)
+    cuts = np.cumsum(lens)  # cortes acumulados (no usados aquí, pero útiles si segmentas la estela)
+    return z_pts, cuts
+
+def radius_schedule(k, n_frames):
+    t_norm = k / max(1, n_frames - 1)
+    return eps_base * (1.0 + eps_amp * np.sin(2*np.pi*eps_freq * t_norm))
+
+def animate_star_like_with_ball(
+    c_list, beta_list,
+    n_arc=1500, n_ray=250,
+    x_min=1e-3, x_max=1e3, r_len=None,
+    fps=24, dur_seconds=20, trail_len=0.06,
+    out_gif="star_like_bola_variable.gif",
+    out_mp4="star_like_bola_variable.mp4",
+    dpi=130
+):
+    # === Muestras de la curva (arcos + rayos) ===
+    arcs, rays = star_like_samples(c_list, beta_list, n_arc, n_ray, x_min, x_max, r_len)
+    segments = arcs + rays
+
+    # Para la línea base (gris) con cortes limpios:
+    z_plot = concat_with_separators(segments)
+    x_plot, y_plot = z_plot.real, z_plot.imag
+
+    # Para el recorrido del punto: todos los puntos seguidos (sin separadores)
+    z_pts, cuts = build_point_array(segments)
+    if len(z_pts) == 0:
+        raise RuntimeError("No hay puntos para animar (revisa parámetros).")
+
+    # Cronograma
+    n_frames = int(fps * dur_seconds)
+    idxs = np.linspace(0, len(z_pts) - 1, n_frames).astype(int)
+
+    # Figura
+    fig, ax = plt.subplots(figsize=(6.6, 6.6))
+    ax.set_aspect('equal', adjustable='box')
+    ax.grid(True, alpha=0.35)
+    ax.set_xlabel('Re(z)'); ax.set_ylabel('Im(z)')
+    ax.set_title(r'Curva semi-estrella: punto con disco $\varepsilon(t)$')
+
+    # Límites con margen
+    pad = 0.06
+    xmin, xmax = np.nanmin(x_plot), np.nanmax(x_plot)
+    ymin, ymax = np.nanmin(y_plot), np.nanmax(y_plot)
+    dx, dy = xmax - xmin, ymax - ymin
+    ax.set_xlim(xmin - pad*dx, xmax + pad*dx)
+    ax.set_ylim(ymin - pad*dy, ymax + pad*dy)
+
+    # Artistas
+    base_line,      = ax.plot(x_plot, y_plot, lw=1.2, alpha=0.9, color='#444', label='Curva')
+    highlight_line, = ax.plot([], [], lw=3, color='orange', label='Dentro del disco')
+    circle_line,    = ax.plot([], [], '--', lw=1.4, color='C1', label=r'$|z-t|=\varepsilon(t)$')
+    point_scatter    = ax.scatter([], [], s=40, zorder=3, color='C0', label='t')
+
+    # Estela (opcional)
+    if trail_len > 0:
+        trail_line, = ax.plot([], [], lw=2, color='C0', alpha=0.65)
+    else:
+        trail_line = None
+
+    ax.legend(loc='best')
+    phi = np.linspace(0, 2*np.pi, 360)
+
+    def update(k):
+        i = idxs[k]
+        t = z_pts[i]
+        eps_k = radius_schedule(k, n_frames)
+
+        # Máscara de puntos dentro del disco (sobre z_pts sin separadores)
+        mask_pts = np.abs(z_pts - t) < eps_k
+
+        # Construir resaltado con separadores + NaN fuera del disco
+        z_high = make_highlight_with_mask(segments, mask_pts)
+        highlight_line.set_data(z_high.real, z_high.imag)
+
+        # Círculo
+        circle = t + eps_k * (np.cos(phi) + 1j*np.sin(phi))
+        circle_line.set_data(circle.real, circle.imag)
+
+        # Punto
+        point_scatter.set_offsets([[t.real, t.imag]])
+
+        # Estela (segmento de los últimos 'span' puntos del recorrido)
+        if trail_line is not None:
+            span = max(1, int(trail_len * len(z_pts)))
+            i0 = max(0, i - span)
+            z_tr = z_pts[i0:i+1]
+            trail_line.set_data(z_tr.real, z_tr.imag)
+
+        return (highlight_line, circle_line, point_scatter, trail_line) if trail_line else \
+               (highlight_line, circle_line, point_scatter)
+
+    anim = FuncAnimation(fig, update, frames=n_frames, interval=1000/fps, blit=True)
+
+    # Guardar GIF
+    gif_writer = PillowWriter(fps=fps)
+    anim.save(out_gif, writer=gif_writer, dpi=dpi)
+    print(f"✔ GIF guardado en: {out_gif}")
+
+    # Guardar MP4 si hay ffmpeg
+    if HAVE_FFMPEG:
+        try:
+            mp4_writer = FFMpegWriter(fps=fps, bitrate=2000)
+            anim.save(out_mp4, writer=mp4_writer, dpi=dpi)
+            print(f"✔ MP4 guardado en: {out_mp4}")
+        except Exception as e:
+            print(f"⚠ No se pudo exportar MP4: {e}")
+
+    plt.close(fig)
+
+if __name__ == "__main__":
+    animate_star_like_with_ball(
+        c_list=c_list, beta_list=beta_list,
+        n_arc=n_arc, n_ray=n_ray,
+        x_min=x_min, x_max=x_max, r_len=r_len,
+        fps=fps, dur_seconds=dur_seconds, trail_len=trail_len,
+        out_gif="star_like_bola_variable.gif",
+        out_mp4="star_like_bola_variable.mp4",
+        dpi=130
+    )

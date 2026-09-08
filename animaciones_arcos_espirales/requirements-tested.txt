@@ -1,0 +1,4 @@
+# Versiones verificadas en el entorno de esta entrega.
+numpy==2.3.5
+matplotlib==3.10.8
+Pillow==12.3.0

@@ -1,0 +1,50 @@
+[
+  {
+    "archivo": "arcos_sin_rayos",
+    "ramas_dibujadas": 5,
+    "ramas_recorridas_indices_0": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "cuadros_programados": 500,
+    "fps": 25,
+    "duracion_segundos": 20.0,
+    "dpi": 130,
+    "tamano_pixels": [
+      858,
+      858
+    ],
+    "eps_base": 0.25,
+    "eps_amp": 0.6,
+    "eps_freq": 1.0,
+    "multicolor": false,
+    "solo_imagenes": false
+  },
+  {
+    "archivo": "arcos_sin_rayos_limpio",
+    "ramas_dibujadas": 5,
+    "ramas_recorridas_indices_0": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "cuadros_programados": 500,
+    "fps": 25,
+    "duracion_segundos": 20.0,
+    "dpi": 130,
+    "tamano_pixels": [
+      468,
+      858
+    ],
+    "eps_base": 0.25,
+    "eps_amp": 0.6,
+    "eps_freq": 1.0,
+    "multicolor": false,
+    "solo_imagenes": false
+  }
+]
