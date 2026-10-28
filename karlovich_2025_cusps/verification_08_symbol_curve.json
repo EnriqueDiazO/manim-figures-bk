@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "passes": 2,
+  "require_virtualenv": true,
+  "packages": ["numpy", "matplotlib", "Pillow", "nbformat", "nbclient"],
+  "notebook_globs": ["notebooks/08_symbol_curve.ipynb"],
+  "script_globs": ["src/render_symbol_curve.py"],
+  "notebooks": [
+    {
+      "path": "notebooks/08_symbol_curve.ipynb",
+      "script_ids": ["render_symbol_curve"],
+      "check_ids": ["render_symbol_curve"]
+    }
+  ],
+  "scripts": [
+    {
+      "id": "render_symbol_curve",
+      "path": "src/render_symbol_curve.py",
+      "cwd": ".",
+      "args": ["--output-dir", "{temp}", "--frames", "24", "--fps", "8"],
+      "timeout_seconds": 120,
+      "expected_returncode": 0,
+      "stdout_contains": ["reflection_error", "pdf:", "mp4:"],
+      "stderr_contains": [],
+      "expected_files": [
+        "{temp}/fredholm_symbol_curve.pdf",
+        "{temp}/fredholm_symbol_curve.png",
+        "{temp}/fredholm_symbol_curve.gif",
+        "{temp}/fredholm_symbol_curve.mp4"
+      ]
+    }
+  ],
+  "commands": [],
+  "resources": ["src/visual_style.py"]
+}

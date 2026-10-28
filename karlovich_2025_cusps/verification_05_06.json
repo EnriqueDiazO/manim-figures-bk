@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "passes": 2,
+  "require_virtualenv": true,
+  "packages": ["numpy", "matplotlib", "Pillow", "nbformat", "nbclient"],
+  "notebook_globs": [
+    "notebooks/05_cauchy_operator_action.ipynb",
+    "notebooks/06_mellin_fourier.ipynb"
+  ],
+  "script_globs": [
+    "src/render_cauchy_operator_action.py",
+    "src/render_mellin_fourier.py"
+  ],
+  "notebooks": [
+    {
+      "path": "notebooks/05_cauchy_operator_action.ipynb",
+      "script_ids": ["cauchy_numerical"],
+      "check_ids": ["cauchy_numerical"],
+      "timeout_seconds": 900
+    },
+    {
+      "path": "notebooks/06_mellin_fourier.ipynb",
+      "script_ids": ["mellin_fourier"],
+      "check_ids": ["mellin_fourier"],
+      "timeout_seconds": 900
+    }
+  ],
+  "scripts": [
+    {
+      "id": "cauchy_numerical",
+      "path": "src/render_cauchy_operator_action.py",
+      "cwd": ".",
+      "args": [],
+      "timeout_seconds": 60,
+      "expected_returncode": 0,
+      "stdout_contains": ["Hilbert normalization"],
+      "stderr_contains": [],
+      "expected_files": []
+    },
+    {
+      "id": "mellin_fourier",
+      "path": "src/render_mellin_fourier.py",
+      "cwd": ".",
+      "args": [],
+      "timeout_seconds": 60,
+      "expected_returncode": 0,
+      "stdout_contains": ["paper_coth norm error"],
+      "stderr_contains": [],
+      "expected_files": []
+    }
+  ],
+  "commands": [],
+  "resources": ["src/visual_style.py"]
+}

@@ -1,0 +1,131 @@
+{
+  "status": "APROBADO",
+  "manifest": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/verification_08_symbol_curve.json",
+  "environment": {
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "python_executable": "/tmp/k25_venv/bin/python",
+    "python_version": "3.12.2 (main, Dec 16 2025, 12:15:18) [GCC 11.4.0]",
+    "virtualenv": true,
+    "packages": {
+      "numpy": "2.4.6",
+      "matplotlib": "3.10.9",
+      "Pillow": "12.2.0",
+      "nbformat": "5.10.4",
+      "nbclient": "0.11.0"
+    }
+  },
+  "inventory": {
+    "notebooks": [
+      "notebooks/08_symbol_curve.ipynb"
+    ],
+    "scripts": [
+      "src/render_symbol_curve.py"
+    ],
+    "resources": [
+      "src/visual_style.py"
+    ]
+  },
+  "notebooks": [
+    {
+      "path": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/notebooks/08_symbol_curve.ipynb",
+      "status": "APROBADO",
+      "cells": 8,
+      "markdown_cells": 4,
+      "code_cells": 4,
+      "code_blocks": 0,
+      "source_matches": 0,
+      "local_references": [
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_symbol_curve.py"
+      ],
+      "script_references": [
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_symbol_curve.py"
+      ],
+      "findings": []
+    }
+  ],
+  "notebook_runs": [
+    {
+      "path": "notebooks/08_symbol_curve.ipynb",
+      "pass": 1,
+      "kernel": "nuevo",
+      "timeout_seconds": 300,
+      "duration_seconds": 7.418,
+      "markdown_cells": 4,
+      "code_cells": 4,
+      "traceback": "",
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "path": "notebooks/08_symbol_curve.ipynb",
+      "pass": 2,
+      "kernel": "nuevo",
+      "timeout_seconds": 300,
+      "duration_seconds": 7.143,
+      "markdown_cells": 4,
+      "code_cells": 4,
+      "traceback": "",
+      "status": "APROBADO",
+      "errors": []
+    }
+  ],
+  "runs": [
+    {
+      "id": "render_symbol_curve",
+      "pass": 1,
+      "command": [
+        "/tmp/k25_venv/bin/python",
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_symbol_curve.py",
+        "--output-dir",
+        "/tmp/material_docente_p1_gfhxy1pc/render_symbol_curve",
+        "--frames",
+        "24",
+        "--fps",
+        "8"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 2.844,
+      "stdout": "The final zero-fiber symbol uses x in extended R and nu = 1/p + delta.\n{'reflection_error': 2.3556123656502583e-16, 'left_endpoint_error': 0.0, 'right_endpoint_error': 0.0}\npdf: /tmp/material_docente_p1_gfhxy1pc/render_symbol_curve/fredholm_symbol_curve.pdf\npng: /tmp/material_docente_p1_gfhxy1pc/render_symbol_curve/fredholm_symbol_curve.png\ngif: /tmp/material_docente_p1_gfhxy1pc/render_symbol_curve/fredholm_symbol_curve.gif\nmp4: /tmp/material_docente_p1_gfhxy1pc/render_symbol_curve/fredholm_symbol_curve.mp4\n",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "render_symbol_curve",
+      "pass": 2,
+      "command": [
+        "/tmp/k25_venv/bin/python",
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_symbol_curve.py",
+        "--output-dir",
+        "/tmp/material_docente_p2_7z1i8rtq/render_symbol_curve",
+        "--frames",
+        "24",
+        "--fps",
+        "8"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 2.905,
+      "stdout": "The final zero-fiber symbol uses x in extended R and nu = 1/p + delta.\n{'reflection_error': 2.3556123656502583e-16, 'left_endpoint_error': 0.0, 'right_endpoint_error': 0.0}\npdf: /tmp/material_docente_p2_7z1i8rtq/render_symbol_curve/fredholm_symbol_curve.pdf\npng: /tmp/material_docente_p2_7z1i8rtq/render_symbol_curve/fredholm_symbol_curve.png\ngif: /tmp/material_docente_p2_7z1i8rtq/render_symbol_curve/fredholm_symbol_curve.gif\nmp4: /tmp/material_docente_p2_7z1i8rtq/render_symbol_curve/fredholm_symbol_curve.mp4\n",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    }
+  ],
+  "hashes_before": {
+    "notebooks/08_symbol_curve.ipynb": "aa61a3a7edec0ae71a5c458d785c53998269f74e80b4d8c26af6750e0f14dd4a",
+    "src/render_symbol_curve.py": "45cf7dc4e9e742a403e7495993c51528bd398b75d8cff1a8f08d126554bcce1e",
+    "src/visual_style.py": "65926d420fd651cfbc3b4efe9b5a69f5e3ea37ab6d217ca91f198db5ea0ce339"
+  },
+  "hashes_after": {
+    "notebooks/08_symbol_curve.ipynb": "aa61a3a7edec0ae71a5c458d785c53998269f74e80b4d8c26af6750e0f14dd4a",
+    "src/render_symbol_curve.py": "45cf7dc4e9e742a403e7495993c51528bd398b75d8cff1a8f08d126554bcce1e",
+    "src/visual_style.py": "65926d420fd651cfbc3b4efe9b5a69f5e3ea37ab6d217ca91f198db5ea0ce339"
+  },
+  "issues": []
+}

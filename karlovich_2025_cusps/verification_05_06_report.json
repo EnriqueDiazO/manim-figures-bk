@@ -1,0 +1,199 @@
+{
+  "status": "APROBADO",
+  "manifest": "/tmp/k25_root_stage/verification_05_06.json",
+  "environment": {
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "python_executable": "/tmp/k25_verify_venv/bin/python",
+    "python_version": "3.12.2 (main, Dec 16 2025, 12:15:18) [GCC 11.4.0]",
+    "virtualenv": true,
+    "packages": {
+      "numpy": "2.4.6",
+      "matplotlib": "3.10.9",
+      "Pillow": "12.2.0",
+      "nbformat": "5.10.4",
+      "nbclient": "0.11.0"
+    }
+  },
+  "inventory": {
+    "notebooks": [
+      "notebooks/05_cauchy_operator_action.ipynb",
+      "notebooks/06_mellin_fourier.ipynb"
+    ],
+    "scripts": [
+      "src/render_cauchy_operator_action.py",
+      "src/render_mellin_fourier.py"
+    ],
+    "resources": [
+      "src/visual_style.py"
+    ]
+  },
+  "notebooks": [
+    {
+      "path": "/tmp/k25_root_stage/notebooks/05_cauchy_operator_action.ipynb",
+      "status": "APROBADO",
+      "cells": 9,
+      "markdown_cells": 5,
+      "code_cells": 4,
+      "code_blocks": 0,
+      "source_matches": 0,
+      "local_references": [
+        "/tmp/k25_root_stage/src/render_cauchy_operator_action.py"
+      ],
+      "script_references": [
+        "/tmp/k25_root_stage/src/render_cauchy_operator_action.py"
+      ],
+      "findings": []
+    },
+    {
+      "path": "/tmp/k25_root_stage/notebooks/06_mellin_fourier.ipynb",
+      "status": "APROBADO",
+      "cells": 9,
+      "markdown_cells": 5,
+      "code_cells": 4,
+      "code_blocks": 0,
+      "source_matches": 0,
+      "local_references": [
+        "/tmp/k25_root_stage/src/render_mellin_fourier.py"
+      ],
+      "script_references": [
+        "/tmp/k25_root_stage/src/render_mellin_fourier.py"
+      ],
+      "findings": []
+    }
+  ],
+  "notebook_runs": [
+    {
+      "path": "notebooks/05_cauchy_operator_action.ipynb",
+      "pass": 1,
+      "kernel": "nuevo",
+      "timeout_seconds": 900,
+      "duration_seconds": 21.678,
+      "markdown_cells": 5,
+      "code_cells": 4,
+      "traceback": "",
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "path": "notebooks/06_mellin_fourier.ipynb",
+      "pass": 1,
+      "kernel": "nuevo",
+      "timeout_seconds": 900,
+      "duration_seconds": 67.276,
+      "markdown_cells": 5,
+      "code_cells": 4,
+      "traceback": "",
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "path": "notebooks/05_cauchy_operator_action.ipynb",
+      "pass": 2,
+      "kernel": "nuevo",
+      "timeout_seconds": 900,
+      "duration_seconds": 20.367,
+      "markdown_cells": 5,
+      "code_cells": 4,
+      "traceback": "",
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "path": "notebooks/06_mellin_fourier.ipynb",
+      "pass": 2,
+      "kernel": "nuevo",
+      "timeout_seconds": 900,
+      "duration_seconds": 68.632,
+      "markdown_cells": 5,
+      "code_cells": 4,
+      "traceback": "",
+      "status": "APROBADO",
+      "errors": []
+    }
+  ],
+  "runs": [
+    {
+      "id": "cauchy_numerical",
+      "pass": 1,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "/tmp/k25_root_stage/src/render_cauchy_operator_action.py"
+      ],
+      "cwd": "/tmp/k25_root_stage",
+      "timeout_seconds": 60,
+      "returncode": 0,
+      "duration_seconds": 0.491,
+      "stdout": "Hilbert normalization: {'max_abs_error': 2.0901746999868465e-09, 'tolerance': 2e-05, 'sample_count': 7}\n",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "mellin_fourier",
+      "pass": 1,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "/tmp/k25_root_stage/src/render_mellin_fourier.py"
+      ],
+      "cwd": "/tmp/k25_root_stage",
+      "timeout_seconds": 60,
+      "returncode": 0,
+      "duration_seconds": 0.406,
+      "stdout": "smooth_demo norm error 3.115365216356464e-05 FFT inverse error 3.3868974854406617e-16\npaper_coth norm error 3.115365216356464e-05 FFT inverse error 3.3868974854406617e-16\n",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "cauchy_numerical",
+      "pass": 2,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "/tmp/k25_root_stage/src/render_cauchy_operator_action.py"
+      ],
+      "cwd": "/tmp/k25_root_stage",
+      "timeout_seconds": 60,
+      "returncode": 0,
+      "duration_seconds": 0.447,
+      "stdout": "Hilbert normalization: {'max_abs_error': 2.0901746999868465e-09, 'tolerance': 2e-05, 'sample_count': 7}\n",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "mellin_fourier",
+      "pass": 2,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "/tmp/k25_root_stage/src/render_mellin_fourier.py"
+      ],
+      "cwd": "/tmp/k25_root_stage",
+      "timeout_seconds": 60,
+      "returncode": 0,
+      "duration_seconds": 0.429,
+      "stdout": "smooth_demo norm error 3.115365216356464e-05 FFT inverse error 3.3868974854406617e-16\npaper_coth norm error 3.115365216356464e-05 FFT inverse error 3.3868974854406617e-16\n",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    }
+  ],
+  "hashes_before": {
+    "notebooks/05_cauchy_operator_action.ipynb": "8f4cbebc27d6dc3d8ed8649e339c507a98b8f96096ff5714c614264a29fc213a",
+    "notebooks/06_mellin_fourier.ipynb": "c165e9ed7444dd79c78f34c6dd6c5b0a77dac00370dfdbb06ba689d4f74f2ef1",
+    "src/render_cauchy_operator_action.py": "2bb724ff209713e3147e9734c27e2e23691ebd5d163dcd7a841ba35ad62fdeb5",
+    "src/render_mellin_fourier.py": "3eb62077fb8a2054a23b3f283fb27d4b4a6e5c817b9c9feab29ac18d60ae3ccf",
+    "src/visual_style.py": "65926d420fd651cfbc3b4efe9b5a69f5e3ea37ab6d217ca91f198db5ea0ce339"
+  },
+  "hashes_after": {
+    "notebooks/05_cauchy_operator_action.ipynb": "8f4cbebc27d6dc3d8ed8649e339c507a98b8f96096ff5714c614264a29fc213a",
+    "notebooks/06_mellin_fourier.ipynb": "c165e9ed7444dd79c78f34c6dd6c5b0a77dac00370dfdbb06ba689d4f74f2ef1",
+    "src/render_cauchy_operator_action.py": "2bb724ff209713e3147e9734c27e2e23691ebd5d163dcd7a841ba35ad62fdeb5",
+    "src/render_mellin_fourier.py": "3eb62077fb8a2054a23b3f283fb27d4b4a6e5c817b9c9feab29ac18d60ae3ccf",
+    "src/visual_style.py": "65926d420fd651cfbc3b4efe9b5a69f5e3ea37ab6d217ca91f198db5ea0ce339"
+  },
+  "issues": []
+}

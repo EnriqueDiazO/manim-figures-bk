@@ -1,0 +1,136 @@
+{
+  "status": "APROBADO",
+  "manifest": "/tmp/k25_root_stage/verification_09.json",
+  "environment": {
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "python_executable": "/tmp/k25_verify_venv/bin/python",
+    "python_version": "3.12.2 (main, Dec 16 2025, 12:15:18) [GCC 11.4.0]",
+    "virtualenv": true,
+    "packages": {
+      "numpy": "2.4.6",
+      "matplotlib": "3.10.9",
+      "Pillow": "12.2.0",
+      "nbformat": "5.10.4",
+      "nbclient": "0.11.0"
+    }
+  },
+  "inventory": {
+    "notebooks": [
+      "notebooks/09_full_reduction_pipeline.ipynb"
+    ],
+    "scripts": [
+      "src/render_full_reduction_pipeline.py"
+    ],
+    "resources": [
+      "outputs/branch_interactions_v1.png",
+      "outputs/complex_conjugation_v1.png",
+      "outputs/fredholm_symbol_curve.png",
+      "outputs/mellin_fourier_pipeline.png",
+      "src/full_pipeline_metadata.py",
+      "src/visual_style.py"
+    ]
+  },
+  "notebooks": [
+    {
+      "path": "/tmp/k25_root_stage/notebooks/09_full_reduction_pipeline.ipynb",
+      "status": "APROBADO",
+      "cells": 9,
+      "markdown_cells": 5,
+      "code_cells": 4,
+      "code_blocks": 0,
+      "source_matches": 0,
+      "local_references": [
+        "/tmp/k25_root_stage/src/full_pipeline_metadata.py",
+        "/tmp/k25_root_stage/src/render_full_reduction_pipeline.py"
+      ],
+      "script_references": [
+        "/tmp/k25_root_stage/src/full_pipeline_metadata.py",
+        "/tmp/k25_root_stage/src/render_full_reduction_pipeline.py"
+      ],
+      "findings": []
+    }
+  ],
+  "notebook_runs": [
+    {
+      "path": "notebooks/09_full_reduction_pipeline.ipynb",
+      "pass": 1,
+      "kernel": "nuevo",
+      "timeout_seconds": 900,
+      "duration_seconds": 12.518,
+      "markdown_cells": 5,
+      "code_cells": 4,
+      "traceback": "",
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "path": "notebooks/09_full_reduction_pipeline.ipynb",
+      "pass": 2,
+      "kernel": "nuevo",
+      "timeout_seconds": 900,
+      "duration_seconds": 11.816,
+      "markdown_cells": 5,
+      "code_cells": 4,
+      "traceback": "",
+      "status": "APROBADO",
+      "errors": []
+    }
+  ],
+  "runs": [
+    {
+      "id": "full_pipeline",
+      "pass": 1,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "/tmp/k25_root_stage/src/render_full_reduction_pipeline.py"
+      ],
+      "cwd": "/tmp/k25_root_stage",
+      "timeout_seconds": 60,
+      "returncode": 0,
+      "duration_seconds": 0.497,
+      "stdout": "Validated 12 full-reduction stages; exact → mod K → finite symbol\n",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "full_pipeline",
+      "pass": 2,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "/tmp/k25_root_stage/src/render_full_reduction_pipeline.py"
+      ],
+      "cwd": "/tmp/k25_root_stage",
+      "timeout_seconds": 60,
+      "returncode": 0,
+      "duration_seconds": 0.443,
+      "stdout": "Validated 12 full-reduction stages; exact → mod K → finite symbol\n",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    }
+  ],
+  "hashes_before": {
+    "notebooks/09_full_reduction_pipeline.ipynb": "3399725e9cf1e9620361d1d3f1c3d211eeb685a5483a913b12b3bec39a702113",
+    "outputs/branch_interactions_v1.png": "427f96b65cb926f38a2fee0f5756f4594a12719ce1a9506f248ff55a7259c867",
+    "outputs/complex_conjugation_v1.png": "5c70462e3298e535582ccf3a38dd4226b7226422d3ee9211de0b6b6a08a18500",
+    "outputs/fredholm_symbol_curve.png": "58df00daed4fd64f74f4d1217e606b314a891b20be2d0699b047d986734ee510",
+    "outputs/mellin_fourier_pipeline.png": "0d8ff19f4bce771d1aab7b4f84c12dc62537732884e53c0e8de51974f64c4373",
+    "src/full_pipeline_metadata.py": "24ac4a3b747df0a99680df47a96456eafe199e18f466003c4c90119663a25035",
+    "src/render_full_reduction_pipeline.py": "7014d0c70888c80642ee956c9e361327ba4f53e5704bc6038c61fa8dd423835b",
+    "src/visual_style.py": "65926d420fd651cfbc3b4efe9b5a69f5e3ea37ab6d217ca91f198db5ea0ce339"
+  },
+  "hashes_after": {
+    "notebooks/09_full_reduction_pipeline.ipynb": "3399725e9cf1e9620361d1d3f1c3d211eeb685a5483a913b12b3bec39a702113",
+    "outputs/branch_interactions_v1.png": "427f96b65cb926f38a2fee0f5756f4594a12719ce1a9506f248ff55a7259c867",
+    "outputs/complex_conjugation_v1.png": "5c70462e3298e535582ccf3a38dd4226b7226422d3ee9211de0b6b6a08a18500",
+    "outputs/fredholm_symbol_curve.png": "58df00daed4fd64f74f4d1217e606b314a891b20be2d0699b047d986734ee510",
+    "outputs/mellin_fourier_pipeline.png": "0d8ff19f4bce771d1aab7b4f84c12dc62537732884e53c0e8de51974f64c4373",
+    "src/full_pipeline_metadata.py": "24ac4a3b747df0a99680df47a96456eafe199e18f466003c4c90119663a25035",
+    "src/render_full_reduction_pipeline.py": "7014d0c70888c80642ee956c9e361327ba4f53e5704bc6038c61fa8dd423835b",
+    "src/visual_style.py": "65926d420fd651cfbc3b4efe9b5a69f5e3ea37ab6d217ca91f198db5ea0ce339"
+  },
+  "issues": []
+}

@@ -1,0 +1,10 @@
+# Track the reviewed exports despite broader repository or global media ignores.
+!outputs/
+!outputs/*.gif
+!outputs/*.mp4
+!outputs/*.png
+!outputs/review_frames/
+!outputs/review_frames/*.png
+
+__pycache__/
+.ipynb_checkpoints/

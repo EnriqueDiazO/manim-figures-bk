@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "passes": 2,
+  "require_virtualenv": true,
+  "packages": ["numpy", "matplotlib", "Pillow", "nbformat", "nbclient"],
+  "notebook_globs": ["notebooks/09_full_reduction_pipeline.ipynb"],
+  "script_globs": ["src/render_full_reduction_pipeline.py"],
+  "notebooks": [
+    {
+      "path": "notebooks/09_full_reduction_pipeline.ipynb",
+      "script_ids": ["full_pipeline"],
+      "check_ids": ["full_pipeline"],
+      "timeout_seconds": 900
+    }
+  ],
+  "scripts": [
+    {
+      "id": "full_pipeline",
+      "path": "src/render_full_reduction_pipeline.py",
+      "cwd": ".",
+      "args": [],
+      "timeout_seconds": 60,
+      "expected_returncode": 0,
+      "stdout_contains": ["Validated 12 full-reduction stages"],
+      "stderr_contains": [],
+      "expected_files": []
+    }
+  ],
+  "commands": [],
+  "resources": [
+    "src/full_pipeline_metadata.py", "src/visual_style.py",
+    "outputs/branch_interactions_v1.png", "outputs/complex_conjugation_v1.png",
+    "outputs/mellin_fourier_pipeline.png", "outputs/fredholm_symbol_curve.png"
+  ]
+}

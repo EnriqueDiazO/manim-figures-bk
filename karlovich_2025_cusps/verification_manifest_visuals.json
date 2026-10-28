@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "passes": 2,
+  "require_virtualenv": true,
+  "packages": [
+    "numpy",
+    "matplotlib",
+    "Pillow",
+    "nbformat",
+    "nbclient",
+    "ipykernel"
+  ],
+  "notebook_globs": [
+    "notebooks/02_power_weights.ipynb",
+    "notebooks/03_log_transport.ipynb",
+    "notebooks/04_complex_conjugation.ipynb",
+    "notebooks/07_branch_interactions.ipynb"
+  ],
+  "script_globs": [
+    "src/render_power_weights.py",
+    "src/render_log_transport.py",
+    "src/render_complex_conjugation.py",
+    "src/render_branch_interactions.py"
+  ],
+  "notebooks": [
+    {
+      "path": "notebooks/02_power_weights.ipynb",
+      "script_ids": [
+        "render_power_weights"
+      ],
+      "check_ids": [
+        "weights_math"
+      ],
+      "timeout_seconds": 1200
+    },
+    {
+      "path": "notebooks/03_log_transport.ipynb",
+      "script_ids": [
+        "render_log_transport"
+      ],
+      "check_ids": [
+        "log_math"
+      ],
+      "timeout_seconds": 1200
+    },
+    {
+      "path": "notebooks/04_complex_conjugation.ipynb",
+      "script_ids": [
+        "render_complex_conjugation"
+      ],
+      "check_ids": [
+        "conjugation_math"
+      ],
+      "timeout_seconds": 1200
+    },
+    {
+      "path": "notebooks/07_branch_interactions.ipynb",
+      "script_ids": [
+        "render_branch_interactions"
+      ],
+      "check_ids": [
+        "branch_math"
+      ],
+      "timeout_seconds": 1200
+    }
+  ],
+  "scripts": [
+    {
+      "id": "render_power_weights",
+      "path": "src/render_power_weights.py",
+      "cwd": ".",
+      "args": [],
+      "timeout_seconds": 120,
+      "expected_returncode": 0,
+      "stdout_contains": [],
+      "stderr_contains": [],
+      "expected_files": []
+    },
+    {
+      "id": "render_log_transport",
+      "path": "src/render_log_transport.py",
+      "cwd": ".",
+      "args": [],
+      "timeout_seconds": 120,
+      "expected_returncode": 0,
+      "stdout_contains": [],
+      "stderr_contains": [],
+      "expected_files": []
+    },
+    {
+      "id": "render_complex_conjugation",
+      "path": "src/render_complex_conjugation.py",
+      "cwd": ".",
+      "args": [],
+      "timeout_seconds": 120,
+      "expected_returncode": 0,
+      "stdout_contains": [],
+      "stderr_contains": [],
+      "expected_files": []
+    },
+    {
+      "id": "render_branch_interactions",
+      "path": "src/render_branch_interactions.py",
+      "cwd": ".",
+      "args": [],
+      "timeout_seconds": 120,
+      "expected_returncode": 0,
+      "stdout_contains": [],
+      "stderr_contains": [],
+      "expected_files": []
+    }
+  ],
+  "commands": [
+    {
+      "id": "weights_math",
+      "argv": [
+        "{python}",
+        "-c",
+        "import sys;sys.path.insert(0,'src');from render_power_weights import weight_figure;import matplotlib.pyplot as plt;f=weight_figure(0.0);assert f.axes[0].get_xscale()=='log';plt.close(f);print('weights_math_ok')"
+      ],
+      "cwd": ".",
+      "timeout_seconds": 120,
+      "expected_returncode": 0,
+      "stdout_contains": [
+        "weights_math_ok"
+      ],
+      "stderr_contains": []
+    },
+    {
+      "id": "log_math",
+      "argv": [
+        "{python}",
+        "-c",
+        "import sys;sys.path.insert(0,'src');from render_log_transport import log_transport_figure;import matplotlib.pyplot as plt,numpy as np;a=log_transport_figure(.25);b=log_transport_figure(1);assert len(a.axes)==2 and len(b.axes)==4;assert np.isclose(np.log(np.exp(2.0)),2.0);plt.close(a);plt.close(b);print('log_math_ok')"
+      ],
+      "cwd": ".",
+      "timeout_seconds": 120,
+      "expected_returncode": 0,
+      "stdout_contains": [
+        "log_math_ok"
+      ],
+      "stderr_contains": []
+    },
+    {
+      "id": "conjugation_math",
+      "argv": [
+        "{python}",
+        "-c",
+        "import sys;sys.path.insert(0,'src');import numpy as np;from render_complex_conjugation import conjugation_figure;import matplotlib.pyplot as plt;z=1+2j;lam=1j;assert np.conj(lam*z)==np.conj(lam)*np.conj(z) and np.conj(lam*z)!=lam*np.conj(z);f=conjugation_figure(1);assert len(f.axes)==2;plt.close(f);print('conjugation_math_ok')"
+      ],
+      "cwd": ".",
+      "timeout_seconds": 120,
+      "expected_returncode": 0,
+      "stdout_contains": [
+        "conjugation_math_ok"
+      ],
+      "stderr_contains": []
+    },
+    {
+      "id": "branch_math",
+      "argv": [
+        "{python}",
+        "-c",
+        "import sys;sys.path.insert(0,'src');from geometry import BranchParameters,default_c_values,default_beta_values,cell_counts;from operator_metadata import INTERACTIONS;p=BranchParameters(3,2,default_c_values(3),default_beta_values(2),2,0);assert cell_counts(p)=={{'CC':9,'CR':6,'RC':6,'RR':4}};assert all('(3.6)' in v.source for v in INTERACTIONS.values());print('branch_math_ok')"
+      ],
+      "cwd": ".",
+      "timeout_seconds": 120,
+      "expected_returncode": 0,
+      "stdout_contains": [
+        "branch_math_ok"
+      ],
+      "stderr_contains": []
+    }
+  ],
+  "resources": [
+    "src/geometry.py",
+    "src/interactions.py",
+    "src/operator_metadata.py",
+    "src/visual_style.py",
+    "src/animation_export.py",
+    "src/manim_branch_interactions.py",
+    "outputs/branch_interactions_v1.gif",
+    "outputs/branch_interactions_v1.mp4",
+    "outputs/branch_interactions_v1.png",
+    "outputs/branch_interactions_static_v1.pdf",
+    "outputs/branch_interactions_beamer.pdf",
+    "outputs/power_weights_v1.gif",
+    "outputs/power_weights_v1.mp4",
+    "outputs/power_weights_v1.png",
+    "outputs/power_weights_v1_static.pdf",
+    "outputs/log_transport_v1.gif",
+    "outputs/log_transport_v1.mp4",
+    "outputs/log_transport_v1.png",
+    "outputs/log_transport_v1_static.pdf",
+    "outputs/complex_conjugation_v1.gif",
+    "outputs/complex_conjugation_v1.mp4",
+    "outputs/complex_conjugation_v1.png",
+    "outputs/complex_conjugation_v1_static.pdf"
+  ]
+}

@@ -1,0 +1,570 @@
+{
+  "status": "APROBADO",
+  "manifest": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/verification_manifest_visuals.json",
+  "environment": {
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "python_executable": "/tmp/k25_verify_venv/bin/python",
+    "python_version": "3.12.2 (main, Dec 16 2025, 12:15:18) [GCC 11.4.0]",
+    "virtualenv": true,
+    "packages": {
+      "numpy": "2.4.6",
+      "matplotlib": "3.10.9",
+      "Pillow": "12.2.0",
+      "nbformat": "5.10.4",
+      "nbclient": "0.11.0",
+      "ipykernel": "7.2.0"
+    }
+  },
+  "inventory": {
+    "notebooks": [
+      "notebooks/02_power_weights.ipynb",
+      "notebooks/03_log_transport.ipynb",
+      "notebooks/04_complex_conjugation.ipynb",
+      "notebooks/07_branch_interactions.ipynb"
+    ],
+    "scripts": [
+      "src/render_branch_interactions.py",
+      "src/render_complex_conjugation.py",
+      "src/render_log_transport.py",
+      "src/render_power_weights.py"
+    ],
+    "resources": [
+      "outputs/branch_interactions_beamer.pdf",
+      "outputs/branch_interactions_static_v1.pdf",
+      "outputs/branch_interactions_v1.gif",
+      "outputs/branch_interactions_v1.mp4",
+      "outputs/branch_interactions_v1.png",
+      "outputs/complex_conjugation_v1.gif",
+      "outputs/complex_conjugation_v1.mp4",
+      "outputs/complex_conjugation_v1.png",
+      "outputs/complex_conjugation_v1_static.pdf",
+      "outputs/log_transport_v1.gif",
+      "outputs/log_transport_v1.mp4",
+      "outputs/log_transport_v1.png",
+      "outputs/log_transport_v1_static.pdf",
+      "outputs/power_weights_v1.gif",
+      "outputs/power_weights_v1.mp4",
+      "outputs/power_weights_v1.png",
+      "outputs/power_weights_v1_static.pdf",
+      "src/animation_export.py",
+      "src/geometry.py",
+      "src/interactions.py",
+      "src/manim_branch_interactions.py",
+      "src/operator_metadata.py",
+      "src/visual_style.py"
+    ]
+  },
+  "notebooks": [
+    {
+      "path": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/notebooks/02_power_weights.ipynb",
+      "status": "APROBADO",
+      "cells": 7,
+      "markdown_cells": 4,
+      "code_cells": 3,
+      "code_blocks": 0,
+      "source_matches": 0,
+      "local_references": [
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_power_weights.py"
+      ],
+      "script_references": [
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_power_weights.py"
+      ],
+      "findings": []
+    },
+    {
+      "path": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/notebooks/03_log_transport.ipynb",
+      "status": "APROBADO",
+      "cells": 7,
+      "markdown_cells": 4,
+      "code_cells": 3,
+      "code_blocks": 0,
+      "source_matches": 0,
+      "local_references": [
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_log_transport.py"
+      ],
+      "script_references": [
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_log_transport.py"
+      ],
+      "findings": []
+    },
+    {
+      "path": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/notebooks/04_complex_conjugation.ipynb",
+      "status": "APROBADO",
+      "cells": 7,
+      "markdown_cells": 4,
+      "code_cells": 3,
+      "code_blocks": 0,
+      "source_matches": 0,
+      "local_references": [
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_complex_conjugation.py"
+      ],
+      "script_references": [
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_complex_conjugation.py"
+      ],
+      "findings": []
+    },
+    {
+      "path": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/notebooks/07_branch_interactions.ipynb",
+      "status": "APROBADO",
+      "cells": 9,
+      "markdown_cells": 5,
+      "code_cells": 4,
+      "code_blocks": 0,
+      "source_matches": 0,
+      "local_references": [
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_branch_interactions.py"
+      ],
+      "script_references": [
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_branch_interactions.py"
+      ],
+      "findings": []
+    }
+  ],
+  "notebook_runs": [
+    {
+      "path": "notebooks/02_power_weights.ipynb",
+      "pass": 1,
+      "kernel": "nuevo",
+      "timeout_seconds": 1200,
+      "duration_seconds": 22.394,
+      "markdown_cells": 4,
+      "code_cells": 3,
+      "traceback": "",
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "path": "notebooks/03_log_transport.ipynb",
+      "pass": 1,
+      "kernel": "nuevo",
+      "timeout_seconds": 1200,
+      "duration_seconds": 30.868,
+      "markdown_cells": 4,
+      "code_cells": 3,
+      "traceback": "",
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "path": "notebooks/04_complex_conjugation.ipynb",
+      "pass": 1,
+      "kernel": "nuevo",
+      "timeout_seconds": 1200,
+      "duration_seconds": 19.417,
+      "markdown_cells": 4,
+      "code_cells": 3,
+      "traceback": "",
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "path": "notebooks/07_branch_interactions.ipynb",
+      "pass": 1,
+      "kernel": "nuevo",
+      "timeout_seconds": 1200,
+      "duration_seconds": 58.375,
+      "markdown_cells": 5,
+      "code_cells": 4,
+      "traceback": "",
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "path": "notebooks/02_power_weights.ipynb",
+      "pass": 2,
+      "kernel": "nuevo",
+      "timeout_seconds": 1200,
+      "duration_seconds": 21.84,
+      "markdown_cells": 4,
+      "code_cells": 3,
+      "traceback": "",
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "path": "notebooks/03_log_transport.ipynb",
+      "pass": 2,
+      "kernel": "nuevo",
+      "timeout_seconds": 1200,
+      "duration_seconds": 31.464,
+      "markdown_cells": 4,
+      "code_cells": 3,
+      "traceback": "",
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "path": "notebooks/04_complex_conjugation.ipynb",
+      "pass": 2,
+      "kernel": "nuevo",
+      "timeout_seconds": 1200,
+      "duration_seconds": 19.38,
+      "markdown_cells": 4,
+      "code_cells": 3,
+      "traceback": "",
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "path": "notebooks/07_branch_interactions.ipynb",
+      "pass": 2,
+      "kernel": "nuevo",
+      "timeout_seconds": 1200,
+      "duration_seconds": 58.749,
+      "markdown_cells": 5,
+      "code_cells": 4,
+      "traceback": "",
+      "status": "APROBADO",
+      "errors": []
+    }
+  ],
+  "runs": [
+    {
+      "id": "render_power_weights",
+      "pass": 1,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_power_weights.py"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 0.427,
+      "stdout": "",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "render_log_transport",
+      "pass": 1,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_log_transport.py"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 0.419,
+      "stdout": "",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "render_complex_conjugation",
+      "pass": 1,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_complex_conjugation.py"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 0.422,
+      "stdout": "",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "render_branch_interactions",
+      "pass": 1,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_branch_interactions.py"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 0.424,
+      "stdout": "",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "weights_math",
+      "pass": 1,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "-c",
+        "import sys;sys.path.insert(0,'src');from render_power_weights import weight_figure;import matplotlib.pyplot as plt;f=weight_figure(0.0);assert f.axes[0].get_xscale()=='log';plt.close(f);print('weights_math_ok')"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 0.457,
+      "stdout": "weights_math_ok\n",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "log_math",
+      "pass": 1,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "-c",
+        "import sys;sys.path.insert(0,'src');from render_log_transport import log_transport_figure;import matplotlib.pyplot as plt,numpy as np;a=log_transport_figure(.25);b=log_transport_figure(1);assert len(a.axes)==2 and len(b.axes)==4;assert np.isclose(np.log(np.exp(2.0)),2.0);plt.close(a);plt.close(b);print('log_math_ok')"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 0.465,
+      "stdout": "log_math_ok\n",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "conjugation_math",
+      "pass": 1,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "-c",
+        "import sys;sys.path.insert(0,'src');import numpy as np;from render_complex_conjugation import conjugation_figure;import matplotlib.pyplot as plt;z=1+2j;lam=1j;assert np.conj(lam*z)==np.conj(lam)*np.conj(z) and np.conj(lam*z)!=lam*np.conj(z);f=conjugation_figure(1);assert len(f.axes)==2;plt.close(f);print('conjugation_math_ok')"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 0.441,
+      "stdout": "conjugation_math_ok\n",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "branch_math",
+      "pass": 1,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "-c",
+        "import sys;sys.path.insert(0,'src');from geometry import BranchParameters,default_c_values,default_beta_values,cell_counts;from operator_metadata import INTERACTIONS;p=BranchParameters(3,2,default_c_values(3),default_beta_values(2),2,0);assert cell_counts(p)=={'CC':9,'CR':6,'RC':6,'RR':4};assert all('(3.6)' in v.source for v in INTERACTIONS.values());print('branch_math_ok')"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 0.097,
+      "stdout": "branch_math_ok\n",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "render_power_weights",
+      "pass": 2,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_power_weights.py"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 0.463,
+      "stdout": "",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "render_log_transport",
+      "pass": 2,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_log_transport.py"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 0.484,
+      "stdout": "",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "render_complex_conjugation",
+      "pass": 2,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_complex_conjugation.py"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 0.421,
+      "stdout": "",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "render_branch_interactions",
+      "pass": 2,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps/src/render_branch_interactions.py"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 0.454,
+      "stdout": "",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "weights_math",
+      "pass": 2,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "-c",
+        "import sys;sys.path.insert(0,'src');from render_power_weights import weight_figure;import matplotlib.pyplot as plt;f=weight_figure(0.0);assert f.axes[0].get_xscale()=='log';plt.close(f);print('weights_math_ok')"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 0.428,
+      "stdout": "weights_math_ok\n",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "log_math",
+      "pass": 2,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "-c",
+        "import sys;sys.path.insert(0,'src');from render_log_transport import log_transport_figure;import matplotlib.pyplot as plt,numpy as np;a=log_transport_figure(.25);b=log_transport_figure(1);assert len(a.axes)==2 and len(b.axes)==4;assert np.isclose(np.log(np.exp(2.0)),2.0);plt.close(a);plt.close(b);print('log_math_ok')"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 0.463,
+      "stdout": "log_math_ok\n",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "conjugation_math",
+      "pass": 2,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "-c",
+        "import sys;sys.path.insert(0,'src');import numpy as np;from render_complex_conjugation import conjugation_figure;import matplotlib.pyplot as plt;z=1+2j;lam=1j;assert np.conj(lam*z)==np.conj(lam)*np.conj(z) and np.conj(lam*z)!=lam*np.conj(z);f=conjugation_figure(1);assert len(f.axes)==2;plt.close(f);print('conjugation_math_ok')"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 0.438,
+      "stdout": "conjugation_math_ok\n",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    },
+    {
+      "id": "branch_math",
+      "pass": 2,
+      "command": [
+        "/tmp/k25_verify_venv/bin/python",
+        "-c",
+        "import sys;sys.path.insert(0,'src');from geometry import BranchParameters,default_c_values,default_beta_values,cell_counts;from operator_metadata import INTERACTIONS;p=BranchParameters(3,2,default_c_values(3),default_beta_values(2),2,0);assert cell_counts(p)=={'CC':9,'CR':6,'RC':6,'RR':4};assert all('(3.6)' in v.source for v in INTERACTIONS.values());print('branch_math_ok')"
+      ],
+      "cwd": "/home/enriquedo/PersonalProjects/manim-figures-bk/karlovich_2025_cusps",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "duration_seconds": 0.095,
+      "stdout": "branch_math_ok\n",
+      "stderr": "",
+      "sqlite": null,
+      "status": "APROBADO",
+      "errors": []
+    }
+  ],
+  "hashes_before": {
+    "notebooks/02_power_weights.ipynb": "21bae6af13825574ec3cc3c701beb5200cd2018ffed756047d90bc8d9d684626",
+    "notebooks/03_log_transport.ipynb": "3fc157e18a46d1c0eb4a82825e37c1941366150c23080808f7007f1ce57c5e20",
+    "notebooks/04_complex_conjugation.ipynb": "3afd6656adfa2cbf11851068d16102f1d5619e06db78630ccf13ba170bee3589",
+    "notebooks/07_branch_interactions.ipynb": "952bec3d36ac88c4d947a5ef34fd59751c5cbb9efffe6e780934c7fd3fa439fa",
+    "outputs/branch_interactions_beamer.pdf": "2eed5868c5691bed99596ab6cdee78941ed99d2dfd8bf73cd8ccfc75c7e07cb1",
+    "outputs/branch_interactions_static_v1.pdf": "26db0af468f2319f7319a30a26f5ee693385d080f09c8d72a9c3a66045bb655b",
+    "outputs/branch_interactions_v1.gif": "892f12048c93af05b290e757f4b7c0bf32ad9ea2f0f3450b6940eb18d1dcc210",
+    "outputs/branch_interactions_v1.mp4": "9e6f6980c6194378f747d1ec4c2db546e4e1875aff22bfbfb7a6de93b6839bae",
+    "outputs/branch_interactions_v1.png": "427f96b65cb926f38a2fee0f5756f4594a12719ce1a9506f248ff55a7259c867",
+    "outputs/complex_conjugation_v1.gif": "031f22880af8e9df2b5074614b9d83d7adf1e10cd1a8c4b233dc0646360d491a",
+    "outputs/complex_conjugation_v1.mp4": "f3b34086c01d4bb8a99c820e5482d7d6394919ba60970a27ae325cba2fc2629b",
+    "outputs/complex_conjugation_v1.png": "5c70462e3298e535582ccf3a38dd4226b7226422d3ee9211de0b6b6a08a18500",
+    "outputs/complex_conjugation_v1_static.pdf": "2a029474cc60dada4ed93c9a30603402c2c01ac5590983487946cd9076495d16",
+    "outputs/log_transport_v1.gif": "5632bded641396a3802eddddd8da8e08e3c564702752b128a1f6069bb2a7db85",
+    "outputs/log_transport_v1.mp4": "3b8544f518be6d355bbf77d2e687912a6c3c2eb2d513aadf760f44c0685dbeda",
+    "outputs/log_transport_v1.png": "8cb3ebcaffd8f4aa6b1a80ecdc5efbb82d7be25286e0180830ee4a6db55dd147",
+    "outputs/log_transport_v1_static.pdf": "c47e0d4cfbf6f2246b351f999b7d8fbb6b44bd7f406322bb9d7257cfab62c8f0",
+    "outputs/power_weights_v1.gif": "a7aa8d6c1c9acfb6d283c85b0661efa7e2dd59c988de3e89bfd3a03267d05183",
+    "outputs/power_weights_v1.mp4": "f655854731198fa03ccca10723f731b53d84a55e7cd00913d9eb6b230dada82a",
+    "outputs/power_weights_v1.png": "5b7b78e95c0f0f3d443b80947a0f399150d7cf23ffb17e4cec1eeafe40a768f1",
+    "outputs/power_weights_v1_static.pdf": "4375ceb33bc7780a175c40f5f0aef5d7ed14c2b66baf389ae42e7a5f40e3128d",
+    "src/animation_export.py": "35f0e0380b762afe042c62dddc0ce3366c9de62b2d0722d029e76d3456099d1e",
+    "src/geometry.py": "abb958587a315f68a63b5e0095b3d314cd7956e711bc9ac0ebd6c6e2c1ad19d8",
+    "src/interactions.py": "0e5dc983af08a70cc13db2f9744d76b907e042dd1cc60bec1f55f7954327fbc9",
+    "src/manim_branch_interactions.py": "b7e179899f4abd573091eba277b9660cdd9297fc1bcb70d63c169766b7231b44",
+    "src/operator_metadata.py": "def888a005750ae0a53dee428e3c37d184ea7e0d959794908fbbbe45bca7482c",
+    "src/render_branch_interactions.py": "8089b433dd8d8ce79f23e19280c01bdd9b2ad003e5546a1d541622232593268a",
+    "src/render_complex_conjugation.py": "4dc01fce9a8fed6de044bd7b51e297d6e0c75eebcc775b14bc41ec8484bb53eb",
+    "src/render_log_transport.py": "6cb573d69d7653cdd1e0cf73621c48a0be4fd030009387be01086134a4ddccd2",
+    "src/render_power_weights.py": "44a4f27c659e32d6bca1ef76a6022334e778c646e09cb45ca526ebb2b16a5b4f",
+    "src/visual_style.py": "65926d420fd651cfbc3b4efe9b5a69f5e3ea37ab6d217ca91f198db5ea0ce339"
+  },
+  "hashes_after": {
+    "notebooks/02_power_weights.ipynb": "21bae6af13825574ec3cc3c701beb5200cd2018ffed756047d90bc8d9d684626",
+    "notebooks/03_log_transport.ipynb": "3fc157e18a46d1c0eb4a82825e37c1941366150c23080808f7007f1ce57c5e20",
+    "notebooks/04_complex_conjugation.ipynb": "3afd6656adfa2cbf11851068d16102f1d5619e06db78630ccf13ba170bee3589",
+    "notebooks/07_branch_interactions.ipynb": "952bec3d36ac88c4d947a5ef34fd59751c5cbb9efffe6e780934c7fd3fa439fa",
+    "outputs/branch_interactions_beamer.pdf": "2eed5868c5691bed99596ab6cdee78941ed99d2dfd8bf73cd8ccfc75c7e07cb1",
+    "outputs/branch_interactions_static_v1.pdf": "26db0af468f2319f7319a30a26f5ee693385d080f09c8d72a9c3a66045bb655b",
+    "outputs/branch_interactions_v1.gif": "892f12048c93af05b290e757f4b7c0bf32ad9ea2f0f3450b6940eb18d1dcc210",
+    "outputs/branch_interactions_v1.mp4": "9e6f6980c6194378f747d1ec4c2db546e4e1875aff22bfbfb7a6de93b6839bae",
+    "outputs/branch_interactions_v1.png": "427f96b65cb926f38a2fee0f5756f4594a12719ce1a9506f248ff55a7259c867",
+    "outputs/complex_conjugation_v1.gif": "031f22880af8e9df2b5074614b9d83d7adf1e10cd1a8c4b233dc0646360d491a",
+    "outputs/complex_conjugation_v1.mp4": "f3b34086c01d4bb8a99c820e5482d7d6394919ba60970a27ae325cba2fc2629b",
+    "outputs/complex_conjugation_v1.png": "5c70462e3298e535582ccf3a38dd4226b7226422d3ee9211de0b6b6a08a18500",
+    "outputs/complex_conjugation_v1_static.pdf": "2a029474cc60dada4ed93c9a30603402c2c01ac5590983487946cd9076495d16",
+    "outputs/log_transport_v1.gif": "5632bded641396a3802eddddd8da8e08e3c564702752b128a1f6069bb2a7db85",
+    "outputs/log_transport_v1.mp4": "3b8544f518be6d355bbf77d2e687912a6c3c2eb2d513aadf760f44c0685dbeda",
+    "outputs/log_transport_v1.png": "8cb3ebcaffd8f4aa6b1a80ecdc5efbb82d7be25286e0180830ee4a6db55dd147",
+    "outputs/log_transport_v1_static.pdf": "c47e0d4cfbf6f2246b351f999b7d8fbb6b44bd7f406322bb9d7257cfab62c8f0",
+    "outputs/power_weights_v1.gif": "a7aa8d6c1c9acfb6d283c85b0661efa7e2dd59c988de3e89bfd3a03267d05183",
+    "outputs/power_weights_v1.mp4": "f655854731198fa03ccca10723f731b53d84a55e7cd00913d9eb6b230dada82a",
+    "outputs/power_weights_v1.png": "5b7b78e95c0f0f3d443b80947a0f399150d7cf23ffb17e4cec1eeafe40a768f1",
+    "outputs/power_weights_v1_static.pdf": "4375ceb33bc7780a175c40f5f0aef5d7ed14c2b66baf389ae42e7a5f40e3128d",
+    "src/animation_export.py": "35f0e0380b762afe042c62dddc0ce3366c9de62b2d0722d029e76d3456099d1e",
+    "src/geometry.py": "abb958587a315f68a63b5e0095b3d314cd7956e711bc9ac0ebd6c6e2c1ad19d8",
+    "src/interactions.py": "0e5dc983af08a70cc13db2f9744d76b907e042dd1cc60bec1f55f7954327fbc9",
+    "src/manim_branch_interactions.py": "b7e179899f4abd573091eba277b9660cdd9297fc1bcb70d63c169766b7231b44",
+    "src/operator_metadata.py": "def888a005750ae0a53dee428e3c37d184ea7e0d959794908fbbbe45bca7482c",
+    "src/render_branch_interactions.py": "8089b433dd8d8ce79f23e19280c01bdd9b2ad003e5546a1d541622232593268a",
+    "src/render_complex_conjugation.py": "4dc01fce9a8fed6de044bd7b51e297d6e0c75eebcc775b14bc41ec8484bb53eb",
+    "src/render_log_transport.py": "6cb573d69d7653cdd1e0cf73621c48a0be4fd030009387be01086134a4ddccd2",
+    "src/render_power_weights.py": "44a4f27c659e32d6bca1ef76a6022334e778c646e09cb45ca526ebb2b16a5b4f",
+    "src/visual_style.py": "65926d420fd651cfbc3b4efe9b5a69f5e3ea37ab6d217ca91f198db5ea0ce339"
+  },
+  "issues": []
+}
